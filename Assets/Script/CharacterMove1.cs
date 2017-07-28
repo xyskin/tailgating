@@ -4,32 +4,40 @@ using UnityEngine;
 
 public class CharacterMove1 : MonoBehaviour {
     float speed;
-    int m;
-    bool isJump;
+    bool isJump, isShit;
+    public Map map;
 	// Use this for initialization
 	void Start () {
-        GetComponent<Rigidbody2D>();
+        
         speed = 1.0f;
-        m = 0;
         isJump = false;
+        isShit = false;
 	}
 
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(isShit);
         this.GetComponent<Rigidbody2D>().AddForce(-this.transform.position * 10.0f);
         this.transform.up = this.transform.position;
         this.transform.RotateAround(new Vector3(0, 0, 0), Vector3.forward, speed * Time.deltaTime);
-        if (speed <= 120.0f)
+        if (!isShit)
         {
-            m++;
-            if (m == 30)
-                m = 0;
-            speed += 0.1f;
+            if (speed <= 120.0f)
+            {
+                speed += 0.1f;
+            }
+        }
+        else
+        {
+            if (speed >= 20.0f)
+            {
+                speed -= 10.0f;
+            }
         }
 
         //Character1
-        if (Input.GetKeyDown(KeyCode.Space) && isJump == false)
+        if (Input.GetKeyDown(KeyCode.Space) && !isJump )
         {
 
             //Debug.Log(isJump);
@@ -46,6 +54,16 @@ public class CharacterMove1 : MonoBehaviour {
             //Debug.Log("Enter");
             isJump = false;
         }
+
+        if (other.tag == "Character"&& map.angle > 350)
+        {
+            //TO-DO
+        }
+
+        if (other.tag == "Shit")
+        {
+            isShit = true;
+        }
     }
 
     //Exit
@@ -56,5 +74,16 @@ public class CharacterMove1 : MonoBehaviour {
             //Debug.Log("Exit");
             isJump = true;
         }
+
+        if (other.tag == "Shit")
+        {
+            isShit = false;
+            Destroy(other.gameObject, 0.0f);
+        }
+    }
+
+    void OntriggerStay2D(Collider2D other)
+    {
+        
     }
 }

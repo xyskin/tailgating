@@ -46,9 +46,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\BirdMoveAntiClockWise.cs" />
+     <Compile Include="Assets\Script\BirdMoveClockWise.cs" />
      <Compile Include="Assets\Script\CharacterMove1.cs" />
      <Compile Include="Assets\Script\CharacterMove2.cs" />
      <Compile Include="Assets\Script\Map.cs" />
+     <Compile Include="Assets\Script\Shit.cs" />
      <Compile Include="Assets\Script\TrapMove.cs" />
      <None Include="Assets\Shader\Moonshader.shader" />
  <Reference Include="UnityEngine.UI">
