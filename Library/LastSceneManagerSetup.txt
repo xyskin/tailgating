@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Day and night.unity
+  isLoaded: 1
+  isActive: 1
