@@ -9,14 +9,14 @@ public class TrapMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //GetComponent<Rigidbody2D>();
-        speed = 15.0f;
+        speed = 1.0f;
         //m = 0;
        //isJump = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        this.GetComponent<Rigidbody2D>().AddForce(-this.transform.position * 100000.0f);
+        this.GetComponent<Rigidbody2D>().AddForce(-this.transform.position * 1000.0f);
         this.transform.up = this.transform.position;
         this.transform.RotateAround(new Vector3(0, 0, 0), Vector3.forward, -speed * Time.deltaTime);
         Debug.DrawRay(this.transform.position, -this.transform.up * 10.0f, Color.red);
