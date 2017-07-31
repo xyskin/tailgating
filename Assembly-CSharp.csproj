@@ -50,11 +50,16 @@
      <Compile Include="Assets\Script\BirdMoveClockWise.cs" />
      <Compile Include="Assets\Script\Bounce.cs" />
      <Compile Include="Assets\Script\Bounce1.cs" />
+     <Compile Include="Assets\Script\Bounce2.cs" />
      <Compile Include="Assets\Script\CharacterMove1.cs" />
      <Compile Include="Assets\Script\CharacterMove2.cs" />
+     <Compile Include="Assets\Script\Countdown.cs" />
+     <Compile Include="Assets\Script\GameStart.cs" />
      <Compile Include="Assets\Script\Map.cs" />
+     <Compile Include="Assets\Script\Restart.cs" />
      <Compile Include="Assets\Script\Shit.cs" />
      <Compile Include="Assets\Script\TrapMove.cs" />
+     <Compile Include="Assets\Script\isStart.cs" />
      <None Include="Assets\Shader\Moonshader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

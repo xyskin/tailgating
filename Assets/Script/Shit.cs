@@ -6,7 +6,7 @@ public class Shit : MonoBehaviour {
     float speed;
 	// Use this for initialization
 	void Start () {
-        speed = 10.0f;
+        speed = 5.0f;
 	}
 	
 	// Update is called once per frame
