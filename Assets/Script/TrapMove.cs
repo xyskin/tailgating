@@ -9,7 +9,7 @@ public class TrapMove : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //GetComponent<Rigidbody2D>();
-        speed = 1.0f;
+        speed = 5.0f;
         //m = 0;
        //isJump = false;
 	}
@@ -37,14 +37,7 @@ public class TrapMove : MonoBehaviour {
         //}
 	}
 
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    if (other.tag == "Ground")
-    //    {
-    //        //Debug.Log("Enter");
-    //        isJump = false;
-    //    }
-    //}
+   
 
     //void OnTriggerExit2D(Collider2D other)
     //{

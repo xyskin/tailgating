@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMove2 : MonoBehaviour {
-    float speed;
+    public float speed;
     bool isJump, isShit;
     public Map map;
 	// Use this for initialization
@@ -46,7 +46,7 @@ public class CharacterMove2 : MonoBehaviour {
     }
 
     //Enter
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag == "Ground" || other.tag == "Building")
         {
@@ -80,8 +80,5 @@ public class CharacterMove2 : MonoBehaviour {
         }
     }
 
-    void OntriggerStay2D(Collider2D other)
-    {
-        
-    }
+    
 }

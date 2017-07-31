@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterMove1 : MonoBehaviour {
-    float speed;
+public class CharacterMove1 : MonoBehaviour
+{
+    public float speed;
     bool isJump, isShit;
     public Map map;
-	// Use this for initialization
-	void Start () {
-        
+    // Use this for initialization
+    void Start()
+    {
+
         speed = 1.0f;
         isJump = false;
         isShit = false;
-	}
+    }
 
     // Update is called once per frame
     void Update()
@@ -37,7 +39,7 @@ public class CharacterMove1 : MonoBehaviour {
         }
 
         //Character1
-        if (Input.GetKeyDown(KeyCode.Space) && !isJump )
+        if (Input.GetKeyDown(KeyCode.Space) && !isJump)
         {
 
             //Debug.Log(isJump);
@@ -47,15 +49,16 @@ public class CharacterMove1 : MonoBehaviour {
     }
 
     //Enter
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if (other.tag == "Ground" || other.tag == "Building")
         {
             //Debug.Log("Enter");
             isJump = false;
+            //Debug.Log(other.tag);
         }
 
-        if (other.tag == "Character"&& map.angle > 350)
+        if (other.tag == "Character" && map.angle > 350)
         {
             //TO-DO
         }
@@ -64,6 +67,11 @@ public class CharacterMove1 : MonoBehaviour {
         {
             isShit = true;
         }
+
+        //if (other.tag == "Bounce")
+        //{
+        //    speed = -speed;
+        //}
     }
 
     //Exit
@@ -82,8 +90,4 @@ public class CharacterMove1 : MonoBehaviour {
         }
     }
 
-    void OntriggerStay2D(Collider2D other)
-    {
-        
-    }
 }
