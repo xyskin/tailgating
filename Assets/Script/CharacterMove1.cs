@@ -24,7 +24,7 @@ public class CharacterMove1 : MonoBehaviour
         isShit = false;
         isPress = false;
         isStart.ra = false;
-        
+        //this.GetComponent<Animation>().Play();
         //isStart.isStr = false;
         count = Random.Range(1.0f, 3.0f);
     }
@@ -32,6 +32,7 @@ public class CharacterMove1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(ra!=null)
         ra.GetComponent<Text>().text = isStart.cha1.ToString();
         count -= Time.deltaTime;
