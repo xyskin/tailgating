@@ -16,7 +16,9 @@ public class Bounce2 : MonoBehaviour {
         isBounce1 = false;
         isBounce2 = false;
         i1 = i2 = false;
-	}
+       
+    
+}
 	
 	// Update is called once per frame
 	void Update () {

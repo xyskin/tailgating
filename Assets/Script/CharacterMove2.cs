@@ -102,7 +102,7 @@ public class CharacterMove2 : MonoBehaviour {
         }
 
         //Character1
-        if (((Input.GetKeyDown(KeyCode.P) && isStart.isStr) || (!isStart.isStr && isPress)) && !isJump)
+        if (((Input.GetKeyDown(KeyCode.UpArrow) && isStart.isStr) || (!isStart.isStr && isPress)) && !isJump)
         {
             isFirst = true;
             //Debug.Log(isJump);
@@ -111,13 +111,13 @@ public class CharacterMove2 : MonoBehaviour {
             t= 1.0f;
 
         }
-        if (Input.GetKey(KeyCode.P) && isFirst)
+        if (Input.GetKey(KeyCode.UpArrow) && isFirst)
         {
             t -= Time.deltaTime;
             if (t >= 0)
                 this.GetComponent<Rigidbody2D>().AddForce(this.transform.position * 5.0f);
         }
-        if (Input.GetKeyUp(KeyCode.P))
+        if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             isFirst = false;
         }

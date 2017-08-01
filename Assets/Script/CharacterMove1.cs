@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class CharacterMove1 : MonoBehaviour
 {
     public float speed;
+       
     bool isJump, isShit;
     public Map map;
     public Image background, Rawin;
@@ -45,8 +46,9 @@ public class CharacterMove1 : MonoBehaviour
             this.transform.localScale = new Vector3(0.15f, 0.15f, 1);
             if (speed < 0 && !b1.GetComponent<Bounce1>().i1 && !b2.GetComponent<Bounce1>().i1 && !b3.GetComponent<Bounce1>().i1 && !b4.GetComponent<Bounce1>().i1)
             {
+                Debug.Log("Change speed");
                 speed = -speed;
-                Debug.Log("Change");
+                
             }
             if (!isShit)
             {
@@ -68,6 +70,7 @@ public class CharacterMove1 : MonoBehaviour
             this.transform.localScale = new Vector3(-0.15f,0.15f, 1);
             if (speed > 0 && !c1.GetComponent<Bounce2>().i1 && !c2.GetComponent<Bounce2>().i1 && !c3.GetComponent<Bounce2>().i1 && !c4.GetComponent<Bounce2>().i1)
             {
+                Debug.Log("Change");
                 speed = -speed;
             }
             if (!isShit)
@@ -129,7 +132,7 @@ public class CharacterMove1 : MonoBehaviour
             isPress = true;
         }
 
-        
+        Debug.Log(speed);
 
     }
 
