@@ -16,6 +16,7 @@ public class CharacterMove1 : MonoBehaviour
     public Bounce2 c1, c2, c3, c4;
     bool isPress,isFirst;
     float count,t;
+    AudioSource a;
     // Use this for initialization
     void Start()
     {
@@ -28,6 +29,8 @@ public class CharacterMove1 : MonoBehaviour
         //this.GetComponent<Animation>().Play();
         //isStart.isStr = false;
         count = Random.Range(1.0f, 3.0f);
+        a=GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -90,7 +93,7 @@ public class CharacterMove1 : MonoBehaviour
 
            
         }
-        if (isStart.cha1 >=4)
+        if (isStart.cha1 >=2)
         {
             
             Rawin.GetComponent<Image>().enabled = true;
@@ -110,6 +113,8 @@ public class CharacterMove1 : MonoBehaviour
         {
 
             //Debug.Log(isJump);
+            
+                a.Play();
             this.GetComponent<Rigidbody2D>().AddForce(this.transform.position * 200.0f);
             isPress = false;
             isFirst = true;
@@ -164,7 +169,7 @@ public class CharacterMove1 : MonoBehaviour
             if (other.tag == "Character2" && map.angle > 350 && !isStart.ra && isStart.cha1 <= 4)
             {
 
-                if (isStart.cha1 <= 3)
+                if (isStart.cha1 <= 1)
                 {
                     //TO-DO
                     //Rawin.GetComponent<Image>().enabled = true;

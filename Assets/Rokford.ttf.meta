@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d15f6740575f19d4bb3974eea3efd570
+timeCreated: 1501562650
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Rokford
+  fontNames:
+  - Rokford
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

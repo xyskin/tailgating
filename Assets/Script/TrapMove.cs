@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class TrapMove : MonoBehaviour {
     float speed;
+    AudioSource a;
     //int m;
     //bool isJump;
 	// Use this for initialization
 	void Start () {
         //GetComponent<Rigidbody2D>();
         speed = 5.0f;
+        a = GetComponent<AudioSource>();
         //m = 0;
-       //isJump = false;
-	}
+        //isJump = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
